@@ -1,0 +1,20 @@
+.clients-management {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.client-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}

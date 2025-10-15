@@ -1,0 +1,55 @@
+.contact {
+  padding: 80px 0;
+  min-height: 100vh;
+  padding-top: 120px; /* Add space for sticky header */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.formSection {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mapSection {
+  margin-top: 50px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .formSection {
+    padding: 20px;
+  }
+  
+  .mapSection {
+    padding: 20px;
+  }
+}
+

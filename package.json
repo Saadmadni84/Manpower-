@@ -1,0 +1,45 @@
+{
+  "name": "manpower-company",
+  "version": "1.0.0",
+  "description": "Manpower Supply Company - Full Stack Application",
+  "scripts": {
+    "start": "./scripts/start-fullstack.sh",
+    "dev": "./scripts/start-fullstack.sh",
+    "stop": "./scripts/stop-fullstack.sh",
+    "restart": "./scripts/restart-fullstack.sh",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "backend:watch": "cd backend && npm run dev:watch",
+    "backend:debug": "cd backend && npm run dev:debug",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "test": "cd backend && npm test",
+    "test:api": "./test-api.sh",
+    "seed": "cd backend && npm run seed",
+    "backup": "cd backend && npm run backup",
+    "cleanup": "cd backend && npm run cleanup",
+    "logs:backend": "tail -f logs/backend.log",
+    "logs:frontend": "tail -f logs/frontend.log",
+    "setup": "./scripts/quick-start.sh"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "keywords": [
+    "manpower",
+    "supply",
+    "company",
+    "saudi-arabia",
+    "fullstack",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Manpower Supply Company",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

@@ -1,0 +1,99 @@
+
+> manpower-backend@1.0.0 start
+> node server.js
+
+Cloudinary configured successfully
+[2025-10-08T19:33:47.320Z] INFO: Connecting to MongoDB... {"uri":"mongodb://localhost:27017/manpower_db","environment":"development"}
+[2025-10-08T19:33:47.321Z] INFO: Attempting to connect to MongoDB (attempt 1/5)... 
+Starting Manpower Company Backend Server...
+Environment: development
+Port: 5001
+API Version: v1
+[2025-10-08T19:33:47.334Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db","readyState":1}
+[2025-10-08T19:33:47.336Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db"}
+[2025-10-08T19:33:47.336Z] INFO: Database connected successfully 
+Cloudinary configured successfully
+[2025-10-08T19:33:47.336Z] INFO: Cloudinary configured successfully 
+[2025-10-08T19:33:47.337Z] INFO: Application started successfully {"environment":"development","port":"5001","database":"local","cloudinary":"manpower-company-ksa"}
+[2025-10-08T19:33:47.338Z] INFO: Server is running on port 5001 {"environment":"development","port":"5001","apiVersion":"v1"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e69c3369738833aaac9526',
+  iat: 1759950365,
+  exp: 1760036765
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e69c3369738833aaac9526',
+  iat: 1759950365,
+  exp: 1760036765
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e69c3369738833aaac9526"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e69c3369738833aaac9526"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 27.550 ms - -[0m
+[2025-10-08T19:34:31.834Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 28ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/stats [32m200[0m 46.347 ms - 2229[0m
+[2025-10-08T19:34:31.842Z] INFO: GET /api/admin/dashboard/stats 200 46ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e69c3369738833aaac9526',
+  iat: 1759950365,
+  exp: 1760036765
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e69c3369738833aaac9526"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 14.076 ms - 2229[0m
+[2025-10-08T19:34:31.858Z] INFO: GET /api/admin/dashboard/stats 200 14ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e69c3369738833aaac9526',
+  iat: 1759950365,
+  exp: 1760036765
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e69c3369738833aaac9526',
+  iat: 1759950365,
+  exp: 1760036765
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e69c3369738833aaac9526"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e69c3369738833aaac9526"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 23.778 ms - -[0m
+[2025-10-08T19:34:43.604Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 24ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/stats [32m200[0m 548.436 ms - 2229[0m
+[2025-10-08T19:34:44.118Z] INFO: GET /api/admin/dashboard/stats 200 552ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e69c3369738833aaac9526',
+  iat: 1759950365,
+  exp: 1760036765
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e69c3369738833aaac9526"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 184.594 ms - 2229[0m
+[2025-10-08T19:34:44.320Z] INFO: GET /api/admin/dashboard/stats 200 185ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[2025-10-08T19:34:51.016Z] INFO: SIGTERM received. Shutting down gracefully... 
+[2025-10-08T19:34:51.017Z] INFO: Starting graceful shutdown... 
+SIGTERM received. Shutting down gracefully...

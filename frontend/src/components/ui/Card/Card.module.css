@@ -1,0 +1,30 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Padding variants */
+.small {
+  padding: 16px;
+}
+
+.medium {
+  padding: 24px;
+}
+
+.large {
+  padding: 32px;
+}
+
+.none {
+  padding: 0;
+}
+

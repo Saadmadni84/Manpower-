@@ -1,0 +1,66 @@
+
+> manpower-backend@1.0.0 dev
+> node server.js
+
+Cloudinary configured successfully
+[2025-10-08T22:08:33.308Z] INFO: Connecting to MongoDB... {"uri":"mongodb://localhost:27017/manpower_db","environment":"development"}
+[2025-10-08T22:08:33.308Z] INFO: Attempting to connect to MongoDB (attempt 1/5)... 
+Starting Manpower Company Backend Server...
+Environment: development
+Port: 5001
+API Version: v1
+[2025-10-08T22:08:33.321Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db","readyState":1}
+[2025-10-08T22:08:33.323Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db"}
+[2025-10-08T22:08:33.323Z] INFO: Database connected successfully 
+Cloudinary configured successfully
+[2025-10-08T22:08:33.323Z] INFO: Cloudinary configured successfully 
+[2025-10-08T22:08:33.325Z] INFO: Application started successfully {"environment":"development","port":"5001","database":"local","cloudinary":"manpower-company-ksa"}
+[2025-10-08T22:08:33.325Z] INFO: Server is running on port 5001 {"environment":"development","port":"5001","apiVersion":"v1"}
+[0mGET /api/health [32m200[0m 1.567 ms - 100[0m
+[2025-10-08T22:08:34.473Z] INFO: GET /api/health 200 2ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 1.159 ms - 191[0m
+[2025-10-08T22:08:42.839Z] INFO: GET /footer/content 404 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 0.238 ms - 191[0m
+[2025-10-08T22:08:42.842Z] INFO: GET /footer/content 404 0ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [32m200[0m 40.998 ms - 10263[0m
+[2025-10-08T22:09:28.912Z] INFO: GET /api/footer/content 200 41ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 0.537 ms - 191[0m
+[2025-10-08T22:09:49.007Z] INFO: GET /footer/content 404 1ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+[0mGET /api/footer/content [32m200[0m 13.716 ms - 10263[0m
+[2025-10-08T22:10:11.337Z] INFO: GET /api/footer/content 200 14ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 1.065 ms - 191[0m
+[2025-10-08T22:10:16.702Z] INFO: GET /footer/content 404 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 0.366 ms - 191[0m
+[2025-10-08T22:10:16.727Z] INFO: GET /footer/content 404 1ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 1.343 ms - 191[0m
+[2025-10-08T22:10:52.338Z] INFO: GET /footer/content 404 3ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 1.028 ms - 191[0m
+[2025-10-08T22:10:52.348Z] INFO: GET /footer/content 404 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /footer/content [33m404[0m 0.414 ms - 191[0m
+[2025-10-08T22:11:07.246Z] INFO: GET /footer/content 404 0ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+[0mGET /api/footer/content [32m200[0m 40.077 ms - 10263[0m
+[2025-10-08T22:11:23.903Z] INFO: GET /api/footer/content 200 41ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 13.783 ms - -[0m
+[2025-10-08T22:11:48.794Z] INFO: GET /api/footer/content 304 14ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [32m200[0m 474.922 ms - 10263[0m
+[2025-10-08T22:11:59.934Z] INFO: GET /api/footer/content 200 476ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0.1 Safari/605.1.15","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 29.797 ms - -[0m
+[2025-10-08T22:12:15.895Z] INFO: GET /api/footer/content 304 31ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 4.587 ms - -[0m
+[2025-10-08T22:12:15.902Z] INFO: GET /api/footer/content 304 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 55.651 ms - -[0m
+[2025-10-08T22:12:37.701Z] INFO: GET /api/footer/content 304 56ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 5.020 ms - -[0m
+[2025-10-08T22:12:37.711Z] INFO: GET /api/footer/content 304 6ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 4.485 ms - -[0m
+[2025-10-08T22:12:38.766Z] INFO: GET /api/footer/content 304 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 4.216 ms - -[0m
+[2025-10-08T22:12:38.775Z] INFO: GET /api/footer/content 304 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 3.520 ms - -[0m
+[2025-10-08T22:12:39.814Z] INFO: GET /api/footer/content 304 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 3.282 ms - -[0m
+[2025-10-08T22:12:39.825Z] INFO: GET /api/footer/content 304 3ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 4.640 ms - -[0m
+[2025-10-08T22:12:41.711Z] INFO: GET /api/footer/content 304 6ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/footer/content [36m304[0m 3.945 ms - -[0m
+[2025-10-08T22:12:41.718Z] INFO: GET /api/footer/content 304 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}

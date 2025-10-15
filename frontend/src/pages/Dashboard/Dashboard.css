@@ -1,0 +1,131 @@
+.enhanced-dashboard {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats grid animations */
+.enhanced-dashboard .MuiGrid-item {
+  animation: slideUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.enhanced-dashboard .MuiGrid-item:nth-child(1) { animation-delay: 0.1s; }
+.enhanced-dashboard .MuiGrid-item:nth-child(2) { animation-delay: 0.2s; }
+.enhanced-dashboard .MuiGrid-item:nth-child(3) { animation-delay: 0.3s; }
+.enhanced-dashboard .MuiGrid-item:nth-child(4) { animation-delay: 0.4s; }
+.enhanced-dashboard .MuiGrid-item:nth-child(5) { animation-delay: 0.5s; }
+.enhanced-dashboard .MuiGrid-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quick action cards hover effect */
+.quick-action-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.quick-action-card:hover::before {
+  left: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .enhanced-dashboard {
+    padding: 8px;
+  }
+
+  .enhanced-dashboard .MuiTypography-h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .enhanced-dashboard .MuiGrid-container {
+    margin: 0 !important;
+  }
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading-skeleton {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-size: 1000px 100%;
+}
+
+/* Time display styling */
+.current-time-display {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+
+/* Notification pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.notification-indicator {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* System status card gradient */
+.system-status-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Print styles */
+@media print {
+  .enhanced-dashboard {
+    background: white !important;
+  }
+
+  .enhanced-dashboard .MuiButton-root,
+  .enhanced-dashboard .MuiIconButton-root {
+    display: none !important;
+  }
+}
+

@@ -1,0 +1,18 @@
+{
+  "home": "Home",
+  "about": "About Us",
+  "services": "Services",
+  "clients": "Clients",
+  "careers": "Careers",
+  "gallery": "Gallery",
+  "contact": "Contact",
+  "admin": "Admin",
+  "login": "Login",
+  "logout": "Logout",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+  "settings": "Settings",
+  "language": "Language",
+  "english": "English",
+  "arabic": "العربية"
+}

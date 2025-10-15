@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Login Status</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+        .box { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Login Status Checker</h1>
+    
+    <div class="box">
+        <h2>Current Status:</h2>
+        <div id="status"></div>
+    </div>
+
+    <div class="box">
+        <h2>Quick Actions:</h2>
+        <button onclick="checkStatus()">Refresh Status</button>
+        <button onclick="goToLogin()">Go to Login</button>
+        <button onclick="goToDashboard()">Go to Dashboard</button>
+        <button onclick="clearAuth()">Clear Auth & Logout</button>
+    </div>
+
+    <script>
+        function checkStatus() {
+            const token = localStorage.getItem('adminToken');
+            const user = localStorage.getItem('adminUser');
+            
+            let html = '';
+            
+            if (token) {
+                html += '<div class="status success">✅ Token Found: ' + token.substring(0, 20) + '...</div>';
+            } else {
+                html += '<div class="status error">❌ No Token Found</div>';
+            }
+            
+            if (user) {
+                try {
+                    const userData = JSON.parse(user);
+                    html += '<div class="status success">✅ User Found: ' + userData.username + '</div>';
+                } catch(e) {
+                    html += '<div class="status error">❌ User Data Invalid</div>';
+                }
+            } else {
+                html += '<div class="status error">❌ No User Data Found</div>';
+            }
+            
+            if (token && user) {
+                html += '<div class="status success"><strong>✅ YOU ARE LOGGED IN!</strong><br>You can access Website Content now.</div>';
+            } else {
+                html += '<div class="status error"><strong>❌ YOU ARE NOT LOGGED IN!</strong><br>Please login first at <a href="http://localhost:3000/admin-login">http://localhost:3000/admin-login</a></div>';
+            }
+            
+            document.getElementById('status').innerHTML = html;
+        }
+        
+        function goToLogin() {
+            window.location.href = 'http://localhost:3000/admin-login';
+        }
+        
+        function goToDashboard() {
+            window.location.href = 'http://localhost:3000/admin/dashboard';
+        }
+        
+        function clearAuth() {
+            localStorage.removeItem('adminToken');
+            localStorage.removeItem('adminUser');
+            alert('Auth cleared! Please login again.');
+            checkStatus();
+        }
+        
+        // Check on load
+        checkStatus();
+    </script>
+</body>
+</html>

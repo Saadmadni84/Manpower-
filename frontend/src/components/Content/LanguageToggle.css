@@ -1,0 +1,54 @@
+.language-toggle {
+  display: inline-flex;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.language-btn:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.language-btn.active {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flag-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.language-text {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .language-toggle {
+    width: 100%;
+    justify-content: stretch;
+  }
+  
+  .language-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}

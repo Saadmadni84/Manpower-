@@ -1,0 +1,248 @@
+/* Client Logo Component Styles */
+.clientLogo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.clientLogo:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.clientLogo.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clientLogo.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logoContainer {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: grayscale(100%) brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+.clientLogo:hover .logoImage {
+  filter: grayscale(0%) brightness(1);
+}
+
+.logoPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.clientLogo:hover .logoPlaceholder {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.clientInfo {
+  text-align: center;
+  width: 100%;
+}
+
+.clientName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clientDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clientLocation,
+.clientIndustry,
+.clientValue,
+.clientDuration {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.clientLocation {
+  color: #10b981;
+}
+
+.clientIndustry {
+  color: #3b82f6;
+}
+
+.clientValue {
+  color: #f59e0b;
+}
+
+.clientDuration {
+  color: #8b5cf6;
+}
+
+.hoverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.clientLogo:hover .hoverOverlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  text-align: center;
+  padding: 20px;
+}
+
+.overlayTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 15px;
+}
+
+.overlayDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overlayDetails p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Animation for logo entrance */
+@keyframes logoSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.clientLogo.visible {
+  animation: logoSlideIn 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clientLogo {
+    min-width: 150px;
+    padding: 15px;
+  }
+  
+  .logoContainer {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logoPlaceholder {
+    font-size: 1.2rem;
+  }
+  
+  .clientName {
+    font-size: 0.8rem;
+  }
+  
+  .clientDetails {
+    gap: 2px;
+  }
+  
+  .clientLocation,
+  .clientIndustry,
+  .clientValue,
+  .clientDuration {
+    font-size: 0.7rem;
+  }
+  
+  .overlayTitle {
+    font-size: 1rem;
+  }
+  
+  .overlayDetails p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientLogo {
+    min-width: 120px;
+    padding: 12px;
+  }
+  
+  .logoContainer {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logoPlaceholder {
+    font-size: 1rem;
+  }
+}

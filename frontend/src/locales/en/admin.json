@@ -1,0 +1,9 @@
+{
+  "title": "Admin Panel",
+  "login": "Admin Login",
+  "dashboard": "Dashboard",
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back! Here's what's happening with your manpower company."
+  }
+}

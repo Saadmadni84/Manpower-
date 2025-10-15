@@ -1,0 +1,206 @@
+{
+  "hero": {
+    "title": "Saudi Arabia's Premier Manpower Solutions",
+    "subtitle": "25+ years of excellence connecting talent with opportunity across the Kingdom",
+    "description": "We provide comprehensive workforce solutions to leading companies in Saudi Arabia, specializing in airport operations, corporate offices, catering, logistics, construction, and facility management.",
+    "cta": "Discover Our Services",
+    "stats": {
+      "experience": "25+ Years Experience",
+      "employees": "10,000+ Employees",
+      "industries": "Multiple Industries",
+      "regions": "4 Regional Offices",
+      "clients": "200+ Trusted Clients"
+    },
+    "visual": {
+      "title": "Workforce Excellence",
+      "satisfaction": "Client Satisfaction",
+      "support": "24/7 Support"
+    }
+  },
+  "about": {
+    "title": "Why Choose Saudi Manpower?",
+    "subtitle": "Your trusted partner in workforce excellence",
+    "description": "With over 25 years of experience, we have built a reputation for delivering exceptional manpower solutions across Saudi Arabia. Our commitment to quality, reliability, and innovation has made us the preferred choice for leading companies.",
+    "features": {
+      "experience": {
+        "title": "Proven Experience",
+        "description": "25+ years of successful workforce management"
+      },
+      "scale": {
+        "title": "Large Scale Operations",
+        "description": "Managing 10,000+ employees across multiple industries"
+      },
+      "coverage": {
+        "title": "Nationwide Coverage",
+        "description": "Serving clients in Jeddah, Riyadh, Dammam, and Madina"
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Rigorous screening and training programs"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Core Services",
+    "subtitle": "Comprehensive workforce solutions for every industry",
+    "airport": {
+      "title": "Airport Operations",
+      "description": "Professional staff for airport security, ground handling, and customer service"
+    },
+    "corporate": {
+      "title": "Corporate Offices",
+      "description": "Administrative, IT, and management professionals for corporate environments"
+    },
+    "catering": {
+      "title": "Catering Services",
+      "description": "Skilled chefs, waiters, and kitchen staff for hospitality industry"
+    },
+    "logistics": {
+      "title": "Logistics & Supply Chain",
+      "description": "Warehouse staff, drivers, and supply chain coordinators"
+    },
+    "construction": {
+      "title": "Construction & Engineering",
+      "description": "Engineers, technicians, and construction workers"
+    },
+    "facility": {
+      "title": "Facility Management",
+      "description": "Maintenance staff, cleaners, and facility coordinators"
+    }
+  },
+  "clients": {
+    "title": "Trusted by Leading Companies",
+    "subtitle": "We serve industry leaders across Saudi Arabia",
+    "description": "Our diverse client portfolio includes major corporations, government entities, and international companies who trust us with their workforce needs."
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Success stories from satisfied partners"
+  },
+  "trust": {
+    "title": "Trusted by Leading Organizations",
+    "description": "We partner with industry leaders across Saudi Arabia to deliver exceptional workforce solutions"
+  },
+  "services": {
+    "title": "Comprehensive Workforce Solutions",
+    "subtitle": "From specialized airport operations to corporate excellence, we provide skilled professionals across 8 key industries",
+    "airport": {
+      "title": "Airport Operations",
+      "description": "Ground handling, security, customer service, and baggage operations professionals",
+      "stats": {
+        "staff": "2,500+ Staff",
+        "airports": "4 Airports"
+      }
+    },
+    "corporate": {
+      "title": "Corporate Offices", 
+      "description": "Administrative, HR, accounting, and executive support professionals",
+      "stats": {
+        "staff": "1,800+ Staff",
+        "companies": "150+ Companies"
+      }
+    },
+    "catering": {
+      "title": "Catering Services",
+      "description": "Chefs, kitchen staff, food service professionals, and nutritionists",
+      "stats": {
+        "staff": "1,200+ Staff",
+        "venues": "50+ Venues"
+      }
+    },
+    "construction": {
+      "title": "Construction & Infrastructure",
+      "description": "Engineers, skilled workers, safety officers, and project coordinators",
+      "stats": {
+        "staff": "3,000+ Staff",
+        "projects": "100+ Projects"
+      }
+    },
+    "facility": {
+      "title": "Facility Management",
+      "description": "Maintenance technicians, cleaning supervisors, and security personnel",
+      "stats": {
+        "staff": "1,500+ Staff",
+        "facilities": "200+ Facilities"
+      }
+    },
+    "logistics": {
+      "title": "Logistics & Inventory",
+      "description": "Warehouse supervisors, forklift operators, and supply chain coordinators",
+      "stats": {
+        "staff": "800+ Staff",
+        "warehouses": "75+ Warehouses"
+      }
+    },
+    "viewAll": "View All Services"
+  },
+  "whyChoose": {
+    "title": "Why Choose Saudi Manpower?",
+    "description": "Our commitment to excellence and deep understanding of Saudi market needs sets us apart as the premier workforce solutions provider",
+    "features": {
+      "precision": {
+        "title": "Precision Matching",
+        "description": "Advanced screening and matching algorithms ensure the right fit for every role"
+      },
+      "rapid": {
+        "title": "Rapid Deployment",
+        "description": "Quick turnaround times with 24-48 hour placement for urgent requirements"
+      },
+      "compliance": {
+        "title": "Compliance & Safety",
+        "description": "Full compliance with Saudi labor laws and comprehensive safety protocols"
+      },
+      "support": {
+        "title": "Continuous Support",
+        "description": "Ongoing training, performance monitoring, and career development programs"
+      },
+      "expertise": {
+        "title": "Local Expertise",
+        "description": "Deep understanding of Saudi culture, business practices, and market dynamics"
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Rigorous quality control processes ensure consistent service excellence"
+      }
+    }
+  },
+  "successStories": {
+    "title": "Success Stories",
+    "subtitle": "Real results from our partnerships with leading organizations",
+    "stories": {
+      "corporate": {
+        "title": "Leading Corporate Tower",
+        "subtitle": "Complete Facility Management",
+        "description": "Provided comprehensive facility management services including maintenance, security, and administrative support for a 50-story corporate complex",
+        "stats": {
+          "staff": "+150 Staff Managed",
+          "satisfaction": "98% Satisfaction Rate"
+        }
+      },
+      "airport": {
+        "title": "King Fahd International Airport",
+        "subtitle": "Enhanced Airport Operations", 
+        "description": "Deployed 500+ skilled professionals across ground handling, security, and customer service, improving operational efficiency by 35%",
+        "stats": {
+          "staff": "+500 Staff Deployed",
+          "efficiency": "35% Efficiency Increase"
+        }
+      },
+      "construction": {
+        "title": "Major Construction Project",
+        "subtitle": "Infrastructure Development",
+        "description": "Supplied 800+ skilled workers for a major infrastructure project, completing on time and exceeding quality standards",
+        "stats": {
+          "workers": "+800 Workers Supplied",
+          "quality": "100% Quality Score"
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Workforce?",
+    "subtitle": "Join 200+ leading organizations who trust Saudi Manpower for their workforce needs. Let's discuss how we can support your business goals.",
+    "getStarted": "Get Started Today",
+    "exploreCareers": "Explore Careers"
+  }
+}

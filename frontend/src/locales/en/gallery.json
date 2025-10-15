@@ -1,0 +1,30 @@
+{
+  "title": "Company Gallery",
+  "subtitle": "Explore our workforce, training programs, and company achievements",
+  "search": {
+    "placeholder": "Search gallery...",
+    "noResults": "No images found"
+  },
+  "filters": "Filters",
+  "gridView": "Grid View",
+  "listView": "List View",
+  "categories": {
+    "all": "All Categories",
+    "training": "Training Sessions",
+    "safety": "Safety Programs",
+    "events": "Company Events",
+    "workforce": "Workforce in Action",
+    "offices": "Regional Offices",
+    "clients": "Client Sites & Projects",
+    "awards": "Achievement Awards"
+  },
+  "noResults": {
+    "title": "No Images Found",
+    "message": "Try adjusting your search or filter criteria"
+  },
+  "imageModal": "Image Gallery",
+  "closeModal": "Close",
+  "previousImage": "Previous Image",
+  "nextImage": "Next Image",
+  "errorLoadingImages": "Error loading images. Please try again later."
+}

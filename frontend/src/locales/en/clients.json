@@ -1,0 +1,15 @@
+{
+  "title": "Our Clients",
+  "subtitle": "Trusted by leading companies across Saudi Arabia",
+  "hero": {
+    "badge": "200+ Trusted Partners",
+    "title": "Trusted by Leading Organizations",
+    "description": "From Fortune 500 companies to innovative startups, we're proud to serve diverse organizations across Saudi Arabia. Our clients' success stories reflect our commitment to excellence in workforce solutions.",
+    "stats": {
+      "activeClients": "Active Clients",
+      "satisfaction": "Satisfaction Rate",
+      "partnership": "Years Partnership",
+      "industries": "Industry Sectors"
+    }
+  }
+}

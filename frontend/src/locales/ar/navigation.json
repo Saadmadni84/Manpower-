@@ -1,0 +1,18 @@
+{
+  "home": "الرئيسية",
+  "about": "من نحن",
+  "services": "الخدمات",
+  "clients": "العملاء",
+  "careers": "الوظائف",
+  "gallery": "المعرض",
+  "contact": "اتصل بنا",
+  "admin": "الإدارة",
+  "login": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "dashboard": "لوحة التحكم",
+  "profile": "الملف الشخصي",
+  "settings": "الإعدادات",
+  "language": "اللغة",
+  "english": "English",
+  "arabic": "العربية"
+}

@@ -1,0 +1,205 @@
+/* Language Toggle Styles */
+.languageToggle {
+  position: relative;
+  display: inline-block;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  min-width: 120px;
+  justify-content: center;
+}
+
+.toggleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.toggleButton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.toggleButton.rtl {
+  flex-direction: row-reverse;
+}
+
+.toggleButton.ltr {
+  flex-direction: row;
+}
+
+.flag {
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.languageText {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.arrow {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.toggleButton:hover .arrow {
+  transform: scale(1.2);
+}
+
+/* RTL Specific Styles */
+[dir="rtl"] .toggleButton {
+  font-family: 'Cairo', 'Tajawal', 'Arial', sans-serif;
+}
+
+[dir="rtl"] .languageText {
+  font-family: 'Cairo', 'Tajawal', 'Arial', sans-serif;
+}
+
+/* Active State */
+.toggleButton.active {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.toggleButton.active:hover {
+  background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+/* Loading State */
+.toggleButton.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.toggleButton.loading .arrow {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toggleButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+  
+  .flag {
+    font-size: 1rem;
+  }
+  
+  .languageText {
+    font-size: 0.7rem;
+  }
+  
+  .arrow {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggleButton {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    min-width: 90px;
+    gap: 0.3rem;
+  }
+  
+  .flag {
+    font-size: 0.9rem;
+  }
+  
+  .languageText {
+    font-size: 0.65rem;
+  }
+  
+  .arrow {
+    font-size: 0.75rem;
+  }
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] .toggleButton {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  color: #e2e8f0;
+  box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
+}
+
+[data-theme="dark"] .toggleButton:hover {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.4);
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .toggleButton {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  .toggleButton:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .toggleButton {
+    transition: none;
+  }
+  
+  .toggleButton:hover {
+    transform: none;
+  }
+  
+  .arrow {
+    transition: none;
+  }
+  
+  .toggleButton:hover .arrow {
+    transform: none;
+  }
+  
+  .toggleButton.loading .arrow {
+    animation: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .languageToggle {
+    display: none;
+  }
+}

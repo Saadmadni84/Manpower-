@@ -1,0 +1,87 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.admin-main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-page-content {
+  flex-grow: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Smooth transitions */
+.admin-layout * {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-page-content > * {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsive padding */
+@media (max-width: 600px) {
+  .admin-page-content {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .admin-page-content {
+    padding: 32px;
+  }
+}
+
+/* Custom scrollbar */
+.admin-page-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-page-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.admin-page-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.admin-page-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Footer styling */
+.admin-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: white;
+  padding: 16px 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.875rem;
+}
+

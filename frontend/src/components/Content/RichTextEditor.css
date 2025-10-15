@@ -1,0 +1,83 @@
+.rich-text-editor {
+  position: relative;
+  width: 100%;
+}
+
+.rich-text-editor .quill {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.rich-text-editor .ql-toolbar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.rich-text-editor .ql-container {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.rich-text-editor .ql-editor {
+  min-height: 200px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.rich-text-editor .ql-editor.ql-blank::before {
+  color: #999;
+  font-style: normal;
+}
+
+.char-count {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 12px;
+  color: #999;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.char-count.warning {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.char-count.error {
+  color: #f44336;
+  font-weight: 700;
+}
+
+/* RTL Support */
+.rich-text-editor[dir="rtl"] .ql-editor {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Custom scrollbar */
+.rich-text-editor .ql-editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.rich-text-editor .ql-editor::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-bottom-right-radius: 8px;
+}
+
+.rich-text-editor .ql-editor::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.rich-text-editor .ql-editor::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

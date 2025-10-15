@@ -1,0 +1,44 @@
+{
+  "title": "Our Services",
+  "subtitle": "Comprehensive workforce solutions for every industry",
+  "airport": {
+    "title": "Airport Operations",
+    "description": "Professional staff for airport security, ground handling, and customer service operations."
+  },
+  "corporate": {
+    "title": "Corporate Offices",
+    "description": "Administrative, IT, and management professionals for corporate environments."
+  },
+  "catering": {
+    "title": "Catering Services",
+    "description": "Skilled chefs, waiters, and kitchen staff for the hospitality industry."
+  },
+  "logistics": {
+    "title": "Logistics & Supply Chain",
+    "description": "Warehouse staff, drivers, and supply chain coordinators."
+  },
+  "construction": {
+    "title": "Construction & Engineering",
+    "description": "Engineers, technicians, and construction workers."
+  },
+  "facility": {
+    "title": "Facility Management",
+    "description": "Maintenance staff, cleaners, and facility coordinators."
+  },
+  "portfolio": {
+    "title": "Our Service Portfolio",
+    "description": "Specialized workforce solutions tailored to your industry needs"
+  },
+  "stats": {
+    "staff": "Staff",
+    "clients": "Clients"
+  },
+  "detail": {
+    "positions": "Available Positions",
+    "statistics": "Service Statistics",
+    "activeStaff": "Active Staff",
+    "clientCompanies": "Client Companies",
+    "serviceLocations": "Service Locations",
+    "locations": "Key Client Locations"
+  }
+}

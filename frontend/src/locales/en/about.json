@@ -1,0 +1,41 @@
+{
+  "title": "About Us",
+  "subtitle": "25+ Years of Excellence in Workforce Solutions",
+  "description": "Saudi Manpower has been at the forefront of providing comprehensive workforce solutions across Saudi Arabia for over 25 years. Our commitment to quality, reliability, and innovation has made us the preferred choice for leading companies.",
+  "established": "Established 1999",
+  "hero": {
+    "title": "Building Saudi Arabia's Workforce for 25+ Years",
+    "description": "From humble beginnings to becoming the nation's premier manpower solutions provider, we've been at the forefront of workforce development, serving industries that power Saudi Arabia's economic growth.",
+    "cta": {
+      "services": "Our Services",
+      "partner": "Partner With Us"
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To connect exceptional talent with outstanding opportunities, fostering growth and success for both our clients and workforce."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To be Saudi Arabia's leading provider of workforce solutions, setting the standard for excellence in manpower services."
+  },
+  "values": {
+    "title": "Our Values",
+    "integrity": {
+      "title": "Integrity",
+      "description": "We conduct business with the highest ethical standards"
+    },
+    "excellence": {
+      "title": "Excellence",
+      "description": "We strive for the highest quality in everything we do"
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "We embrace new technologies and methodologies"
+    },
+    "partnership": {
+      "title": "Partnership",
+      "description": "We build lasting relationships with our clients and employees"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "saudi-manpower-website",
+  "version": "1.0.0",
+  "description": "Professional manpower supply company website - 25+ years serving Saudi Arabia",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@mui/icons-material": "^7.3.4",
+    "@mui/material": "^7.3.4",
+    "axios": "^1.3.0",
+    "framer-motion": "^12.23.22",
+    "i18next": "^22.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.3.8",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.43.0",
+    "react-i18next": "^12.1.0",
+    "react-icons": "^4.12.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.3",
+    "recharts": "^3.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^3.0.5"
+  }
+}

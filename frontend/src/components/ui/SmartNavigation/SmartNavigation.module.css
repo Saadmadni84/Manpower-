@@ -1,0 +1,374 @@
+/* Smart Navigation - Context-Aware Navigation with Animations */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(30, 58, 138, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  visibility: visible !important;
+  opacity: 1 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav.scrolling {
+  background: rgba(30, 58, 138, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 2rem;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #f1f5f9;
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: #3b82f6;
+}
+
+.logoIcon {
+  font-size: 1.5rem;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+.logoText {
+  background: linear-gradient(135deg, #f1f5f9 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Items */
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: slideInDown 0.6s ease-out;
+  animation-delay: var(--delay);
+  animation-fill-mode: both;
+}
+
+.navItem:hover {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.navItem.active {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  font-weight: 600;
+}
+
+.navIcon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.navItem:hover .navIcon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.navLabel {
+  transition: all 0.3s ease;
+}
+
+/* Animated Underline */
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navItem.active .underline {
+  width: 80%;
+}
+
+.navItem:hover .underline {
+  width: 100%;
+}
+
+/* Hover Glow Effect */
+.hoverGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.navItem:hover .hoverGlow {
+  width: 120px;
+  height: 120px;
+  opacity: 1;
+}
+
+/* Language Toggle - Now handled by LanguageToggle component */
+
+/* Mobile Menu Toggle */
+.mobileToggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: #64748b;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobileToggle:hover .hamburger {
+  background: #3b82f6;
+}
+
+/* Progress Indicator */
+.progressIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(226, 232, 240, 0.3);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  transition: width 0.1s ease;
+  position: relative;
+}
+
+.progressBar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShimmer 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 0.7rem;
+  }
+
+  .navItems {
+    display: none;
+  }
+
+
+  .mobileToggle {
+    display: flex;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    padding: 0.8rem;
+  }
+
+  .logoIcon {
+    font-size: 1.2rem;
+  }
+
+  .logoText {
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .nav {
+    background: rgba(30, 41, 59, 0.95);
+    border-bottom-color: rgba(51, 65, 85, 0.5);
+  }
+
+  .nav.scrolling {
+    background: rgba(30, 41, 59, 0.98);
+  }
+
+  .logo {
+    color: #f1f5f9;
+  }
+
+  .logoText {
+    background: linear-gradient(135deg, #f1f5f9 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .navItem {
+    color: #cbd5e1;
+  }
+
+  .navItem:hover,
+  .navItem.active {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+
+  .hamburger {
+    background: #cbd5e1;
+  }
+
+  .progressIndicator {
+    background: rgba(51, 65, 85, 0.3);
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .navContainer {
+  direction: rtl;
+}
+
+[dir="rtl"] .navItems {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navItem {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .logo {
+  flex-direction: row-reverse;
+}
+
+
+[dir="rtl"] .progressBar::after {
+  animation: progressShimmerRTL 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmerRTL {
+  0%, 100% { transform: translateX(100%); }
+  50% { transform: translateX(-100%); }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .navItem,
+  .navIcon,
+  .logo,
+  .logoIcon,
+  .hoverGlow,
+  .underline,
+  .progressBar {
+    animation: none;
+    transition: none;
+  }
+
+  .logoIcon {
+    animation: none;
+  }
+
+  .navItem {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .nav {
+    background: #fff;
+    border-bottom: 2px solid #000;
+  }
+
+  .navItem {
+    border: 1px solid #000;
+  }
+
+  .navItem:hover,
+  .navItem.active {
+    background: #000;
+    color: #fff;
+  }
+}

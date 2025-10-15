@@ -1,0 +1,429 @@
+/* Services Overview - Modern 2025 Design with Interactive Elements */
+
+.servicesOverview {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicesOverview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23e2e8f0" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23cbd5e1" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23f1f5f9" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  animation: titleReveal 1s ease-out;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  animation: subtitleReveal 1s ease-out 0.2s both;
+}
+
+@keyframes subtitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service Cards Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Interactive Industry Map Section */
+.mapSection {
+  margin: 5rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Additional Services */
+.additionalServices {
+  margin-top: 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.additionalTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.additionalTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 2px;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.serviceItem:hover::before {
+  left: 100%;
+}
+
+.serviceItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.serviceItem:hover .serviceIcon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.serviceName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+.serviceItem:hover .serviceName {
+  color: #3b82f6;
+}
+
+/* Category-specific hover effects */
+.serviceItem[data-category="logistics"]:hover {
+  border-color: #10b981;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.02));
+}
+
+.serviceItem[data-category="logistics"]:hover .serviceName {
+  color: #10b981;
+}
+
+.serviceItem[data-category="facility"]:hover {
+  border-color: #f97316;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.05), rgba(249, 115, 22, 0.02));
+}
+
+.serviceItem[data-category="facility"]:hover .serviceName {
+  color: #f97316;
+}
+
+.serviceItem[data-category="security"]:hover {
+  border-color: #6366f1;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(99, 102, 241, 0.02));
+}
+
+.serviceItem[data-category="security"]:hover .serviceName {
+  color: #6366f1;
+}
+
+.serviceItem[data-category="healthcare"]:hover {
+  border-color: #ec4899;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(236, 72, 153, 0.02));
+}
+
+.serviceItem[data-category="healthcare"]:hover .serviceName {
+  color: #ec4899;
+}
+
+.serviceItem[data-category="education"]:hover {
+  border-color: #8b5cf6;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(139, 92, 246, 0.02));
+}
+
+.serviceItem[data-category="education"]:hover .serviceName {
+  color: #8b5cf6;
+}
+
+.serviceItem[data-category="retail"]:hover {
+  border-color: #06b6d4;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(6, 182, 212, 0.02));
+}
+
+.serviceItem[data-category="retail"]:hover .serviceName {
+  color: #06b6d4;
+}
+
+/* Floating decorative elements */
+.servicesOverview::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .servicesOverview {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mapSection {
+    margin: 3rem 0;
+  }
+
+  .additionalServices {
+    margin-top: 3rem;
+  }
+
+  .additionalTitle {
+    font-size: 1.5rem;
+  }
+
+  .servicesList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .serviceItem {
+    padding: 1rem;
+  }
+
+  .serviceIcon {
+    font-size: 1.2rem;
+  }
+
+  .serviceName {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesOverview {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .servicesGrid {
+    margin-bottom: 2rem;
+  }
+
+  .mapSection {
+    margin: 2rem 0;
+  }
+
+  .additionalTitle {
+    font-size: 1.3rem;
+  }
+
+  .serviceItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .serviceIcon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .servicesOverview {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  }
+
+  .title {
+    background: linear-gradient(135deg, #f1f5f9 0%, #3b82f6 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    color: #cbd5e1;
+  }
+
+  .additionalTitle {
+    color: #f1f5f9;
+  }
+
+  .serviceItem {
+    background: #334155;
+    border-color: rgba(51, 65, 85, 0.5);
+  }
+
+  .serviceName {
+    color: #f1f5f9;
+  }
+
+  .serviceItem:hover {
+    background: #475569;
+    border-color: #3b82f6;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .serviceItem {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .serviceItem::before {
+  left: 100%;
+  transition: left 0.5s ease;
+}
+
+[dir="rtl"] .serviceItem:hover::before {
+  left: -100%;
+}
+
+[dir="rtl"] .additionalTitle::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .title,
+  .subtitle,
+  .serviceItem,
+  .serviceIcon {
+    animation: none;
+    transition: none;
+  }
+
+  .servicesOverview::after {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .serviceItem {
+    border: 2px solid #000;
+  }
+
+  .serviceItem:hover {
+    background: #000;
+    color: #fff;
+  }
+}

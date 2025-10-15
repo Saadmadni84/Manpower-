@@ -1,0 +1,158 @@
+.jobs-list-container {
+  width: 100%;
+}
+
+.jobs-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.results-count {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.view-mode-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.view-mode-btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-mode-btn:hover {
+  background: #f5f5f5;
+}
+
+.view-mode-btn.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.view-mode-btn .icon {
+  font-size: 18px;
+}
+
+.jobs-list {
+  width: 100%;
+}
+
+.jobs-list.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.jobs-list.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-list-item {
+  position: relative;
+}
+
+.job-checkbox {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+}
+
+.job-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.jobs-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.jobs-loading p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+.jobs-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.jobs-empty h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.jobs-empty p {
+  font-size: 16px;
+  color: #7f8c8d;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .jobs-list.grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-list-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .view-mode-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
