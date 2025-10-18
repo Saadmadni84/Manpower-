@@ -2,21 +2,23 @@
 > saudi-manpower-website@1.0.0 start
 > react-scripts start
 
-(node:7629) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(node:30199) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:7629) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
-(node:7629) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:30199) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:30199) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
-Compiled successfully!
+Compiled with warnings.
 
-You can now view saudi-manpower-website in the browser.
+[eslint] 
+src/components/Footer/Footer.jsx
+  Line 50:6:  React Hook useEffect has a missing dependency: 'fetchFooterData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-  Local:            http://localhost:3000
-  On Your Network:  http://192.168.181.135:3000
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
 
-Note that the development build is not optimized.
-To create a production build, use npm run build.
+WARNING in [eslint] 
+src/components/Footer/Footer.jsx
+  Line 50:6:  React Hook useEffect has a missing dependency: 'fetchFooterData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
-webpack compiled successfully
-(node:7629) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+webpack compiled with 1 warning

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const footerController = require('../controllers/footerController');
 const { authenticateToken } = require('../middleware/auth');
-const { checkRole } = require('../middleware/rolePermission');
+const { checkRolePermission } = require('../middleware/rolePermission');
 
 /**
  * Public Routes
@@ -18,21 +18,21 @@ router.get('/content', footerController.getFooterContent);
 // Get all footer content (admin only)
 router.get('/admin/content/all', 
   authenticateToken, 
-  checkRole(['admin', 'super_admin']), 
+  checkRolePermission('admin'), 
   footerController.getAllFooterContent
 );
 
 // Update footer content (admin only)
 router.put('/admin/content', 
   authenticateToken, 
-  checkRole(['admin', 'super_admin']), 
+  checkRolePermission('admin'), 
   footerController.updateFooterContent
 );
 
 // Toggle footer active status (admin only)
 router.patch('/admin/content/:id/toggle', 
   authenticateToken, 
-  checkRole(['admin', 'super_admin']), 
+  checkRolePermission('admin'), 
   footerController.toggleFooterActive
 );
 

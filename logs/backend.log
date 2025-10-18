@@ -3,64 +3,337 @@
 > node server.js
 
 Cloudinary configured successfully
-[2025-10-08T22:08:33.308Z] INFO: Connecting to MongoDB... {"uri":"mongodb://localhost:27017/manpower_db","environment":"development"}
-[2025-10-08T22:08:33.308Z] INFO: Attempting to connect to MongoDB (attempt 1/5)... 
+[2025-10-18T11:54:04.203Z] INFO: Connecting to MongoDB... {"uri":"mongodb://localhost:27017/manpower_db","environment":"development"}
+[2025-10-18T11:54:04.203Z] INFO: Attempting to connect to MongoDB (attempt 1/5)... 
 Starting Manpower Company Backend Server...
 Environment: development
 Port: 5001
 API Version: v1
-[2025-10-08T22:08:33.321Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db","readyState":1}
-[2025-10-08T22:08:33.323Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db"}
-[2025-10-08T22:08:33.323Z] INFO: Database connected successfully 
+[2025-10-18T11:54:04.221Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db","readyState":1}
+[2025-10-18T11:54:04.223Z] INFO: MongoDB connected successfully {"host":"localhost","port":27017,"name":"manpower_db"}
+[2025-10-18T11:54:04.224Z] INFO: Database connected successfully 
 Cloudinary configured successfully
-[2025-10-08T22:08:33.323Z] INFO: Cloudinary configured successfully 
-[2025-10-08T22:08:33.325Z] INFO: Application started successfully {"environment":"development","port":"5001","database":"local","cloudinary":"manpower-company-ksa"}
-[2025-10-08T22:08:33.325Z] INFO: Server is running on port 5001 {"environment":"development","port":"5001","apiVersion":"v1"}
-[0mGET /api/health [32m200[0m 1.567 ms - 100[0m
-[2025-10-08T22:08:34.473Z] INFO: GET /api/health 200 2ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 1.159 ms - 191[0m
-[2025-10-08T22:08:42.839Z] INFO: GET /footer/content 404 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 0.238 ms - 191[0m
-[2025-10-08T22:08:42.842Z] INFO: GET /footer/content 404 0ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [32m200[0m 40.998 ms - 10263[0m
-[2025-10-08T22:09:28.912Z] INFO: GET /api/footer/content 200 41ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 0.537 ms - 191[0m
-[2025-10-08T22:09:49.007Z] INFO: GET /footer/content 404 1ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
-[0mGET /api/footer/content [32m200[0m 13.716 ms - 10263[0m
-[2025-10-08T22:10:11.337Z] INFO: GET /api/footer/content 200 14ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 1.065 ms - 191[0m
-[2025-10-08T22:10:16.702Z] INFO: GET /footer/content 404 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 0.366 ms - 191[0m
-[2025-10-08T22:10:16.727Z] INFO: GET /footer/content 404 1ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 1.343 ms - 191[0m
-[2025-10-08T22:10:52.338Z] INFO: GET /footer/content 404 3ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 1.028 ms - 191[0m
-[2025-10-08T22:10:52.348Z] INFO: GET /footer/content 404 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /footer/content [33m404[0m 0.414 ms - 191[0m
-[2025-10-08T22:11:07.246Z] INFO: GET /footer/content 404 0ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
-[0mGET /api/footer/content [32m200[0m 40.077 ms - 10263[0m
-[2025-10-08T22:11:23.903Z] INFO: GET /api/footer/content 200 41ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 13.783 ms - -[0m
-[2025-10-08T22:11:48.794Z] INFO: GET /api/footer/content 304 14ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [32m200[0m 474.922 ms - 10263[0m
-[2025-10-08T22:11:59.934Z] INFO: GET /api/footer/content 200 476ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0.1 Safari/605.1.15","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 29.797 ms - -[0m
-[2025-10-08T22:12:15.895Z] INFO: GET /api/footer/content 304 31ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 4.587 ms - -[0m
-[2025-10-08T22:12:15.902Z] INFO: GET /api/footer/content 304 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 55.651 ms - -[0m
-[2025-10-08T22:12:37.701Z] INFO: GET /api/footer/content 304 56ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 5.020 ms - -[0m
-[2025-10-08T22:12:37.711Z] INFO: GET /api/footer/content 304 6ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 4.485 ms - -[0m
-[2025-10-08T22:12:38.766Z] INFO: GET /api/footer/content 304 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 4.216 ms - -[0m
-[2025-10-08T22:12:38.775Z] INFO: GET /api/footer/content 304 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 3.520 ms - -[0m
-[2025-10-08T22:12:39.814Z] INFO: GET /api/footer/content 304 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 3.282 ms - -[0m
-[2025-10-08T22:12:39.825Z] INFO: GET /api/footer/content 304 3ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 4.640 ms - -[0m
-[2025-10-08T22:12:41.711Z] INFO: GET /api/footer/content 304 6ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
-[0mGET /api/footer/content [36m304[0m 3.945 ms - -[0m
-[2025-10-08T22:12:41.718Z] INFO: GET /api/footer/content 304 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[2025-10-18T11:54:04.224Z] INFO: Cloudinary configured successfully 
+[2025-10-18T11:54:04.225Z] INFO: Application started successfully {"environment":"development","port":"5001","database":"local","cloudinary":"manpower-company-ksa"}
+[2025-10-18T11:54:04.226Z] INFO: Server is running on port 5001 {"environment":"development","port":"5001","apiVersion":"v1"}
+[0mGET /api/health [32m200[0m 2.106 ms - 100[0m
+[2025-10-18T11:54:05.485Z] INFO: GET /api/health 200 4ms {"ip":"::1","userAgent":"curl/8.7.1","userId":"anonymous"}
+Login attempt: { username: 'admin', password: '***' }
+Admin user found: { username: 'admin', is_active: true }
+Password validation result: true
+[0mPOST /api/admin/login [32m200[0m 387.727 ms - 392[0m
+[2025-10-18T11:54:26.048Z] INFO: POST /api/admin/login 200 389ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 98.685 ms - -[0m
+[2025-10-18T11:54:26.254Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 99ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/overview [32m200[0m 141.239 ms - 254[0m
+[2025-10-18T11:54:26.298Z] INFO: GET /api/admin/dashboard/overview 200 141ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 46.633 ms - -[0m
+[2025-10-18T11:54:26.302Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 47ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/overview [32m200[0m 8.122 ms - 254[0m
+[2025-10-18T11:54:26.312Z] INFO: GET /api/admin/dashboard/overview 200 8ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/stats [32m200[0m 171.404 ms - 2229[0m
+[2025-10-18T11:54:26.319Z] INFO: GET /api/admin/dashboard/stats 200 171ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 15.241 ms - 2229[0m
+[2025-10-18T11:54:26.336Z] INFO: GET /api/admin/dashboard/stats 200 16ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 12.267 ms - 2229[0m
+[2025-10-18T11:54:26.349Z] INFO: GET /api/admin/dashboard/stats 200 12ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 28.999 ms - 2229[0m
+[2025-10-18T11:54:26.379Z] INFO: GET /api/admin/dashboard/stats 200 29ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 15.274 ms - -[0m
+[2025-10-18T11:54:30.225Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 16ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+[0mGET /api/admin/dashboard/overview [32m200[0m 24.382 ms - 254[0m
+[2025-10-18T11:54:30.235Z] INFO: GET /api/admin/dashboard/overview 200 24ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 18.019 ms - -[0m
+[2025-10-18T11:54:30.244Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 18ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/overview [32m200[0m 14.014 ms - 254[0m
+[2025-10-18T11:54:30.251Z] INFO: GET /api/admin/dashboard/overview 200 14ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/stats [32m200[0m 55.157 ms - 2229[0m
+[2025-10-18T11:54:30.261Z] INFO: GET /api/admin/dashboard/stats 200 55ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 16.472 ms - 2229[0m
+[2025-10-18T11:54:30.280Z] INFO: GET /api/admin/dashboard/stats 200 16ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 43.813 ms - 2229[0m
+[2025-10-18T11:54:30.328Z] INFO: GET /api/admin/dashboard/stats 200 47ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 18.120 ms - 2229[0m
+[2025-10-18T11:54:30.349Z] INFO: GET /api/admin/dashboard/stats 200 18ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/overview [32m200[0m 31.318 ms - 254[0m
+[2025-10-18T11:54:41.063Z] INFO: GET /api/admin/dashboard/overview 200 32ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 30.611 ms - -[0m
+[2025-10-18T11:54:41.068Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 31ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/overview [32m200[0m 25.159 ms - 254[0m
+[2025-10-18T11:54:41.089Z] INFO: GET /api/admin/dashboard/overview 200 25ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/recent-activity?limit=10 [36m304[0m 23.366 ms - -[0m
+[2025-10-18T11:54:41.093Z] INFO: GET /api/admin/dashboard/recent-activity?limit=10 304 24ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mGET /api/admin/dashboard/stats [32m200[0m 62.890 ms - 2229[0m
+[2025-10-18T11:54:41.099Z] INFO: GET /api/admin/dashboard/stats 200 63ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 46.136 ms - 2229[0m
+[2025-10-18T11:54:41.147Z] INFO: GET /api/admin/dashboard/stats 200 46ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 26.538 ms - 2229[0m
+[2025-10-18T11:54:41.174Z] INFO: GET /api/admin/dashboard/stats 200 26ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+Auth middleware - Token received: Yes
+Auth middleware - Decoded token: {
+  userId: '68e6d03c7a83909903d49c15',
+  iat: 1760788466,
+  exp: 1760874866
+}
+Auth middleware - Admin found: {
+  id: new ObjectId("68e6d03c7a83909903d49c15"),
+  username: 'admin',
+  is_active: true
+}
+[0mGET /api/admin/dashboard/stats [32m200[0m 15.427 ms - 2229[0m
+[2025-10-18T11:54:41.191Z] INFO: GET /api/admin/dashboard/stats 200 15ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
+[0mPOST /api/admin/logout [32m200[0m 1.406 ms - 46[0m
+[2025-10-18T11:54:46.547Z] INFO: POST /api/admin/logout 200 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36","userId":"anonymous"}
