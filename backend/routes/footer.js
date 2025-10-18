@@ -1,84 +1,40 @@
 const express = require('express');
 const router = express.Router();
 const footerController = require('../controllers/footerController');
-const { 
-  validateNewsletterSubscription, 
-  validateNewsletterUnsubscription,
-  validateFooterSection,
-  validateQuickContact,
-  newsletterRateLimit,
-  validateEmailDomain
-} = require('../middleware/newsletterValidation');
 const { authenticateToken } = require('../middleware/auth');
-const { checkRolePermission } = require('../middleware/rolePermission');
+const { checkRole } = require('../middleware/rolePermission');
 
 /**
- * @route   GET /api/footer/content
- * @desc    Get all active footer content
- * @access  Public
+ * Public Routes
  */
+
+// Get active footer content
 router.get('/content', footerController.getFooterContent);
 
 /**
- * @route   PUT /api/footer/content/:section
- * @desc    Update footer section content
- * @access  Private (Admin only)
+ * Admin Routes (Protected)
  */
-router.put('/content/:section', 
+
+// Get all footer content (admin only)
+router.get('/admin/content/all', 
   authenticateToken, 
-  checkRolePermission('admin'),
-  validateFooterSection,
-  footerController.updateFooterSection
+  checkRole(['admin', 'super_admin']), 
+  footerController.getAllFooterContent
 );
 
-/**
- * @route   POST /api/newsletter/subscribe
- * @desc    Subscribe to newsletter
- * @access  Public
- */
-router.post('/subscribe',
-  newsletterRateLimit,
-  validateEmailDomain,
-  validateNewsletterSubscription,
-  footerController.subscribeNewsletter
+// Update footer content (admin only)
+router.put('/admin/content', 
+  authenticateToken, 
+  checkRole(['admin', 'super_admin']), 
+  footerController.updateFooterContent
 );
 
-/**
- * @route   POST /api/newsletter/unsubscribe
- * @desc    Unsubscribe from newsletter
- * @access  Public
- */
-router.post('/unsubscribe',
-  validateNewsletterUnsubscription,
-  footerController.unsubscribeNewsletter
-);
-
-/**
- * @route   POST /api/footer/contact-quick
- * @desc    Quick contact form from footer
- * @access  Public
- */
-router.post('/contact-quick',
-  validateQuickContact,
-  footerController.quickContact
-);
-
-/**
- * @route   GET /api/footer/social-feeds
- * @desc    Get social media feeds (optional)
- * @access  Public
- */
-router.get('/social-feeds', footerController.getSocialFeeds);
-
-/**
- * @route   GET /api/newsletter/stats
- * @desc    Get newsletter statistics
- * @access  Private (Admin only)
- */
-router.get('/stats',
-  authenticateToken,
-  checkRolePermission('admin'),
-  footerController.getNewsletterStats
+// Toggle footer active status (admin only)
+router.patch('/admin/content/:id/toggle', 
+  authenticateToken, 
+  checkRole(['admin', 'super_admin']), 
+  footerController.toggleFooterActive
 );
 
 module.exports = router;
+

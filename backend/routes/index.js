@@ -15,7 +15,6 @@ router.use(`/admin`, newAdminRoutes);
 router.use(`/${API_VERSION}`, publicRoutes);
 router.use(`/admin/content`, contentRoutes);
 router.use('/footer', footerRoutes);
-router.use('/newsletter', footerRoutes);
 
 // Health check route
 router.get('/health', (req, res) => {

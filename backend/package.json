@@ -22,7 +22,8 @@
     "quick-start": "./scripts/quick-start.sh",
     "db:health": "curl -s http://localhost:5000/health | python3 -m json.tool || curl -s http://localhost:5000/health",
     "db:seed": "npm run seed",
-    "db:reset": "npm run cleanup && npm run seed"
+    "db:reset": "npm run cleanup && npm run seed",
+    "seed:footer": "node scripts/seedFooterContent.js"
   },
   "keywords": [
     "manpower",

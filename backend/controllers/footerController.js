@@ -1,325 +1,159 @@
 const FooterContent = require('../models/FooterContent');
-const Newsletter = require('../models/Newsletter');
-const { validationResult } = require('express-validator');
 const logger = require('../utils/logger');
 
 /**
- * Get all active footer content
+ * Get active footer content
  */
-const getFooterContent = async (req, res) => {
+exports.getFooterContent = async (req, res) => {
   try {
-    const content = await FooterContent.getActiveContent();
-    
-    if (!content || content.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: 'No footer content found'
-      });
-    }
+    let footerContent = await FooterContent.findOne({ isActive: true });
 
-    // Format content for frontend
-    const formattedContent = content.reduce((acc, item) => {
-      acc[item.section] = item.content;
-      return acc;
-    }, {});
-
-    res.json({
-      success: true,
-      data: formattedContent,
-      message: 'Footer content retrieved successfully'
-    });
-
-  } catch (error) {
-    logger.error('Error getting footer content:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
-    });
-  }
-};
-
-/**
- * Update footer content section
- */
-const updateFooterSection = async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Validation failed',
-        errors: errors.array()
-      });
-    }
-
-    const { section } = req.params;
-    const { content } = req.body;
-    const adminId = req.admin?.id || req.user?.id;
-
-    let footerSection = await FooterContent.findOne({ section });
-
-    if (!footerSection) {
-      // Create new section
-      footerSection = new FooterContent({
-        section,
-        content,
-        updatedBy: adminId
-      });
-    } else {
-      // Update existing section
-      footerSection.content = content;
-      footerSection.updatedBy = adminId;
-    }
-
-    await footerSection.save();
-
-    res.json({
-      success: true,
-      data: footerSection.formattedContent,
-      message: 'Footer section updated successfully'
-    });
-
-  } catch (error) {
-    logger.error('Error updating footer section:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
-    });
-  }
-};
-
-/**
- * Newsletter subscription
- */
-const subscribeNewsletter = async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Validation failed',
-        errors: errors.array()
-      });
-    }
-
-    const { email, firstName, lastName, preferences, source } = req.body;
-    const ipAddress = req.ip || req.connection.remoteAddress;
-    const userAgent = req.get('User-Agent');
-
-    try {
-      const subscription = await Newsletter.subscribe({
-        email,
-        firstName,
-        lastName,
-        preferences,
-        source: source || 'footer',
-        ipAddress,
-        userAgent
-      });
-
-      logger.info(`Newsletter subscription successful: ${email}`);
-
-      res.status(201).json({
-        success: true,
-        data: {
-          email: subscription.email,
-          fullName: subscription.fullName,
-          subscriptionStatus: subscription.subscriptionStatus
+    // If no footer content exists, create default
+    if (!footerContent) {
+      footerContent = await FooterContent.create({
+        company: {
+          name: 'Manpower Excellence Company',
+          tagline: '25 Years of Manpower Excellence in Saudi Arabia',
+          logo: '/logo.png'
         },
-        message: 'Successfully subscribed to newsletter'
+        quickLinks: [
+          { label: 'Home', path: '/', order: 1 },
+          { label: 'About Us', path: '/about', order: 2 },
+          { label: 'Our Services', path: '/services', order: 3 },
+          { label: 'Clients', path: '/clients', order: 4 },
+          { label: 'Careers', path: '/careers', order: 5 },
+          { label: 'Contact Us', path: '/contact', order: 6 }
+        ],
+        contact: {
+          address: 'Riyadh, Kingdom of Saudi Arabia',
+          phone: '+966 XX XXX XXXX',
+          email: 'info@manpowerexcellence.com'
+        },
+        socialMedia: [
+          { platform: 'LinkedIn', url: 'https://linkedin.com/company/yourcompany', icon: 'linkedin', order: 1 },
+          { platform: 'Facebook', url: 'https://facebook.com/yourcompany', icon: 'facebook', order: 2 },
+          { platform: 'Instagram', url: 'https://instagram.com/yourcompany', icon: 'instagram', order: 3 }
+        ],
+        copyright: {
+          year: new Date().getFullYear(),
+          text: 'All rights reserved.'
+        },
+        isActive: true
       });
-
-    } catch (subscriptionError) {
-      if (subscriptionError.message === 'Email already subscribed') {
-        return res.status(409).json({
-          success: false,
-          message: 'Email already subscribed to newsletter'
-        });
-      }
-      throw subscriptionError;
     }
 
+    res.json({
+      success: true,
+      data: footerContent
+    });
   } catch (error) {
-    logger.error('Error subscribing to newsletter:', error);
+    logger.error('Error fetching footer content:', { error: error.message });
     res.status(500).json({
       success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+      message: 'Failed to fetch footer content',
+      error: error.message
     });
   }
 };
 
 /**
- * Unsubscribe from newsletter
+ * Update footer content (Admin only)
  */
-const unsubscribeNewsletter = async (req, res) => {
+exports.updateFooterContent = async (req, res) => {
   try {
-    const { email } = req.body;
-    const { reason } = req.query;
+    const { company, quickLinks, contact, socialMedia, copyright } = req.body;
 
-    if (!email) {
-      return res.status(400).json({
-        success: false,
-        message: 'Email is required'
-      });
+    let footerContent = await FooterContent.findOne({ isActive: true });
+
+    if (!footerContent) {
+      footerContent = new FooterContent();
     }
 
-    await Newsletter.unsubscribe(email, reason);
+    // Update fields if provided
+    if (company) footerContent.company = { ...footerContent.company, ...company };
+    if (quickLinks) footerContent.quickLinks = quickLinks;
+    if (contact) footerContent.contact = { ...footerContent.contact, ...contact };
+    if (socialMedia) footerContent.socialMedia = socialMedia;
+    if (copyright) footerContent.copyright = { ...footerContent.copyright, ...copyright };
 
-    logger.info(`Newsletter unsubscription: ${email}`);
+    await footerContent.save();
+
+    logger.info('Footer content updated successfully', { userId: req.user?.id });
 
     res.json({
       success: true,
-      message: 'Successfully unsubscribed from newsletter'
+      message: 'Footer content updated successfully',
+      data: footerContent
     });
-
   } catch (error) {
-    if (error.message === 'Subscription not found') {
+    logger.error('Error updating footer content:', { error: error.message });
+    res.status(500).json({
+      success: false,
+      message: 'Failed to update footer content',
+      error: error.message
+    });
+  }
+};
+
+/**
+ * Get all footer content (Admin only - for management)
+ */
+exports.getAllFooterContent = async (req, res) => {
+  try {
+    const footerContents = await FooterContent.find().sort({ createdAt: -1 });
+
+    res.json({
+      success: true,
+      data: footerContents
+    });
+  } catch (error) {
+    logger.error('Error fetching all footer content:', { error: error.message });
+    res.status(500).json({
+      success: false,
+      message: 'Failed to fetch footer content',
+      error: error.message
+    });
+  }
+};
+
+/**
+ * Toggle footer content active status (Admin only)
+ */
+exports.toggleFooterActive = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Deactivate all footer content
+    await FooterContent.updateMany({}, { isActive: false });
+
+    // Activate the selected one
+    const footerContent = await FooterContent.findByIdAndUpdate(
+      id,
+      { isActive: true },
+      { new: true }
+    );
+
+    if (!footerContent) {
       return res.status(404).json({
         success: false,
-        message: 'Subscription not found'
+        message: 'Footer content not found'
       });
     }
 
-    logger.error('Error unsubscribing from newsletter:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
-    });
-  }
-};
-
-/**
- * Quick contact form from footer
- */
-const quickContact = async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Validation failed',
-        errors: errors.array()
-      });
-    }
-
-    const { name, email, phone, subject, message, source } = req.body;
-    const ipAddress = req.ip || req.connection.remoteAddress;
-    const userAgent = req.get('User-Agent');
-
-    // Here you would typically send an email or save to database
-    // For now, we'll just log it
-    const contactData = {
-      name,
-      email,
-      phone,
-      subject,
-      message,
-      source: source || 'footer',
-      ipAddress,
-      userAgent,
-      timestamp: new Date()
-    };
-
-    logger.info('Quick contact form submission:', contactData);
-
-    // TODO: Implement email sending or database storage
-    // await sendContactEmail(contactData);
-    // await saveContactInquiry(contactData);
+    logger.info('Footer content activated', { id, userId: req.user?.id });
 
     res.json({
       success: true,
-      message: 'Thank you for your message. We will get back to you soon.'
+      message: 'Footer content activated successfully',
+      data: footerContent
     });
-
   } catch (error) {
-    logger.error('Error processing quick contact:', error);
+    logger.error('Error toggling footer active status:', { error: error.message });
     res.status(500).json({
       success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+      message: 'Failed to toggle footer status',
+      error: error.message
     });
   }
 };
 
-/**
- * Get newsletter statistics (Admin only)
- */
-const getNewsletterStats = async (req, res) => {
-  try {
-    const stats = await Newsletter.getStats();
-
-    res.json({
-      success: true,
-      data: stats,
-      message: 'Newsletter statistics retrieved successfully'
-    });
-
-  } catch (error) {
-    logger.error('Error getting newsletter stats:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
-    });
-  }
-};
-
-/**
- * Get social media feeds (optional)
- */
-const getSocialFeeds = async (req, res) => {
-  try {
-    // This would typically fetch from social media APIs
-    // For now, return mock data
-    const socialFeeds = {
-      facebook: {
-        posts: [],
-        followers: 1250,
-        lastUpdated: new Date()
-      },
-      twitter: {
-        tweets: [],
-        followers: 890,
-        lastUpdated: new Date()
-      },
-      linkedin: {
-        posts: [],
-        followers: 2100,
-        lastUpdated: new Date()
-      },
-      instagram: {
-        posts: [],
-        followers: 650,
-        lastUpdated: new Date()
-      }
-    };
-
-    res.json({
-      success: true,
-      data: socialFeeds,
-      message: 'Social media feeds retrieved successfully'
-    });
-
-  } catch (error) {
-    logger.error('Error getting social feeds:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Internal server error',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
-    });
-  }
-};
-
-module.exports = {
-  getFooterContent,
-  updateFooterSection,
-  subscribeNewsletter,
-  unsubscribeNewsletter,
-  quickContact,
-  getNewsletterStats,
-  getSocialFeeds
-};
